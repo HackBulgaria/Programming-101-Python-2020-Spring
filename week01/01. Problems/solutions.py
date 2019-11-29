@@ -19,25 +19,3 @@ def knight_moves(pos: tuple) -> int:
 	return [ 0 <= (pos[0] + o[0]) < 8 and
 			 0 <= (pos[1] + o[1]) < 8 
 			for o in offsets].count(True)
-
-
-	# valids = ((pos[0] - 2, pos[1] - 1),
-	# 	(pos[0] - 2, pos[1] + 1),
-	# 	(pos[0] + 2, pos[1] - 1),
-	# 	(pos[0] + 2, pos[1] + 1),
-	# 	(pos[1] - 2, pos[0] - 1),
-	# 	(pos[1] - 2, pos[0] + 1),
-	# 	(pos[1] + 2, pos[0] - 1),
-	# 	(pos[1] + 2, pos[0] + 1))
-
-	# return (
-	# 	0 <= pos[0] - 2 <= 7 and 0 <= pos[1] - 1 <= 7,
-	# 	0 <= pos[0] - 2 <= 7 and 0 <= pos[1] + 1 <= 7,
-	# 	0 <= pos[0] + 2 <= 7 and 0 <= pos[1] - 1 <= 7,
-	# 	0 <= pos[0] + 2 <= 7 and 0 <= pos[1] + 1 <= 7,
-
-	# 	0 <= pos[1] - 2 <= 7 and 0 <= pos[0] - 1 <= 7,		
-	# 	0 <= pos[1] - 2 <= 7 and 0 <= pos[0] + 1 <= 7,
-	# 	0 <= pos[1] + 2 <= 7 and 0 <= pos[0] - 1 <= 7,
-	# 	0 <= pos[1] + 2 <= 7 and 0 <= pos[0] + 1 <= 7
-	# 	).count(True)
