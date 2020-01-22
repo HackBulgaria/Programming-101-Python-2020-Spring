@@ -8,7 +8,7 @@
 
 На избран от вас език, напишете програма, която от стандарния вход чете:
 
-- големината на касетката - N x M
+- големината на касетката - N x M (**ЗАБЕЛЕЖКА: Касетките нямат нулев ред или колона.**)
 - координатите на изгнилите ябълки
 - след колко дни ще се върнете в къщата си
 
@@ -43,20 +43,22 @@
 Входни данни:
 
 ```
-Enter the size of the box: 20x8
-Еnter the coordinates of the rotten apples: (7,4) (15,3)
+Enter the size of the box: 20x10
+Еnter the coordinates of the rotten apples: (3,8) (16,4)
 After how many days will you come back: 10
 ```
 
 Изход:
 
 ```
-OOOOOOOOOOOXXXXXXXOO
-OOOOOOOOOOOXXXXXXXOO
-OOOOOOOOOOOXXXXXXXOO
-XXXXXXXOOOOXXXXXXXOO
-XXXXXXXOOOOXXXXXXXOO
-XXXXXXXOOOOXXXXXXXOO
-XXXXXXXOOOOOOOOOOOOO
-XXXXXXXOOOOOOOOOOOOO
+OOOOOOOOOOOOXXXXXXXO
+OOOOOOOOOOOOXXXXXXXO
+OOOOOOOOOOOOXXXXXXXO
+OOOOOOOOOOOOXXXXXXXO
+XXXXXXOOOOOOXXXXXXXO
+XXXXXXOOOOOOXXXXXXXO
+XXXXXXOOOOOOXXXXXXXO
+XXXXXXOOOOOOOOOOOOOO
+XXXXXXOOOOOOOOOOOOOO
+XXXXXXOOOOOOOOOOOOOO
 ```
