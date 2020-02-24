@@ -8,8 +8,8 @@ This is going to be the 9th edition of the course.
 
 The course is happening thanks to:
 
-| [![HedgeServ](/partners/hedgeserv.jpg)](https://www.hedgeserv.com/career/) |
-| -------------------------------------------------------------------------- |
+| [![HedgeServ](/partners/hedgeserv.jpg)](https://www.hedgeserv.com/career/) |     | [![HackSoft](/partners/hacksoft.png)](https://www.hacksoft.io/) |
+| -------------------------------------------------------------------------- | --- | --------------------------------------------------------------- |
 
 
 ## Agenda
