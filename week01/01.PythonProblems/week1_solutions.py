@@ -19,6 +19,11 @@ def sum2_of_digits(n):
     return sum([int(i) for i in n_str])
 
 
+def sum3_of_digits(n):
+    n_str = str(abs(n))
+    return sum([int(i) for i in n_str])
+
+
 def to_digits(digits):
     return list(map(int, list(str(digits))))
 
