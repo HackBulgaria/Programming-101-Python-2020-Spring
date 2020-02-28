@@ -1,6 +1,7 @@
 # Week 01 - Introduction to course & Python
 
 [Intro slides](https://slides.com/hackbulgaria/python101-9th-opening)
+[Exceptions slides](https://slides.com/hackbulgaria/python101-9th-exceptions)
 
 ## Data Structures
 
