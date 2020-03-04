@@ -2,7 +2,16 @@ from datetime import datetime, timedelta
 
 
 def validate_conditions(conditions):
-    pass
+    counter = 0
+
+    for condition in conditions:
+        if not condition.get('hours'):
+            counter += 1
+        if condition.get('hours', 0) > 24:
+            raise ValueError('Hours cannot be > 24.')
+
+    if counter != 1:
+        raise ValueError('Invalid conditions.')
 
 
 def ensure_conditions(conditions):

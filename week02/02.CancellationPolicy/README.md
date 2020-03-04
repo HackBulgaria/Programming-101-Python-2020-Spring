@@ -24,8 +24,8 @@ The above example means: You will be feed with:
 
 Notes:
 
-- Make sure the cancellation policy is sorted
 - Only the dictionary that has no `hours` key is required
 - The max `hours` value is 24
+- The cancellation conditions may not be ordered.
 
 Using TDD, implement a program that calculates the price that a customer needs to pay if he/she wants to cancel his/her booking **now**.
