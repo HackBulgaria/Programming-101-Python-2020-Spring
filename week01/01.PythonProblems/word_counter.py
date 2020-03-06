@@ -2,7 +2,7 @@ def is_palindrome(word):
     return word == word[::-1]
 
 
-def contains_word(word, text):
+def get_word_occurences(word, text):
     if is_palindrome(word):
         return text.count(word)
 
@@ -31,7 +31,7 @@ def word_occurances_in_rows(matrix, word):
     word_occurances = 0
 
     for row in matrix:
-        word_occurances += contains_word(word, ''.join(row))
+        word_occurances += get_word_occurences(word, ''.join(row))
 
     return word_occurances
 
@@ -45,7 +45,7 @@ def word_occurances_in_cols(matrix, word):
         for row in matrix:
             column.append(row[i])
 
-        word_occurances += contains_word(word, ''.join(column))
+        word_occurances += get_word_occurences(word, ''.join(column))
 
     return word_occurances
 
@@ -62,7 +62,7 @@ def word_occurances_in_right_diagonals(matrix, word):
                 if i + j == c:
                     diagonal.append(matrix[i][j])
 
-        word_occurances += contains_word(word, ''.join(diagonal))
+        word_occurances += get_word_occurences(word, ''.join(diagonal))
 
     return word_occurances
 
@@ -79,7 +79,7 @@ def word_occurances_in_left_diagonals(matrix, word):
                 if j - i == c:
                     diagonal.append(matrix[i][j])
 
-        word_occurances += contains_word(word, ''.join(diagonal))
+        word_occurances += get_word_occurences(word, ''.join(diagonal))
 
     return word_occurances
 
@@ -104,4 +104,5 @@ def word_counter():
     return word_occurances
 
 
-print(word_counter())
+if __name__ == '__main__':
+    print(word_counter())
