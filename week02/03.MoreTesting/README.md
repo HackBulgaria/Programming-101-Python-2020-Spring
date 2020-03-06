@@ -41,7 +41,7 @@ For example, a fraction `3/9` can be reduced by dividing both the nominator and 
 >>> simplify_fraction((4,10))
 (2,5)
 >>> simplify_fraction((462,63))
-(3,22)
+(22,3)
 ```
 
 ## Collect fractions
