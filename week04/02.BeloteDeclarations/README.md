@@ -175,8 +175,8 @@ Pesho: ["7h", "8h", "9h", "10h", "Jc", "Qh", "Ks", "Ah"]  # team Koteta
     "round 1": {
       "Mecheta": {
         "Marto": {
-          "cards:": ["7s", "8s", "9s", "10c", "Jd", "Qd", "Kh", "As"],
-          "announcements": ["tierce"],
+          "cards:": ["7s", "8s", "9s", "10c", "Jd", "Qh", "Kh", "As"],
+          "announcements": ["belote"],
           "points": 20
         },
         "Rado": {
@@ -192,7 +192,7 @@ Pesho: ["7h", "8h", "9h", "10h", "Jc", "Qh", "Ks", "Ah"]  # team Koteta
           "points": 0
         },
         "Pesho": {
-          "cards:": ["7h", "8h", "9h", "10h", "Jc", "Qh", "Ks", "Ah"],
+          "cards:": ["7h", "8h", "9h", "10h", "Jc", "Qd", "Ks", "Ah"],
           "announcements": ["quarte"],
           "points": 50
         }
