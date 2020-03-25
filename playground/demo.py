@@ -10,5 +10,12 @@ class C(A, B):
     pass
 
 
-class D(C, B):
+class X:
     pass
+
+
+class D(C, X, B):
+    pass
+
+
+print(D.mro())
