@@ -49,7 +49,7 @@ TEAM_NAMES = [
 def generate_teams():
     student_names = STUDENT_NAMES[:]
 
-    for _ in range(10):
+    for _ in range(100):
         random.shuffle(student_names)
 
     teams = [student_names[i:i + 2] for i in range(0, len(student_names), 2)]
