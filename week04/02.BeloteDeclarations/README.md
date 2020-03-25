@@ -38,10 +38,73 @@ The Belote game is explained well in the above link from Wikipedia. There are a 
   - carre of J's = 200 points
 - **NOTE: One card cannot be part from a carre and tierce/quarte/quinte in the same time. It can be part of a belote though.**. Let's say you have the following cards: `['7s', '8s', '9s', '9c', '9d', '9h', 'Kc', 'As']`. In this case the program is expected to output carre of 9's. You can still announce only tierce, but it gives you less points.
 
-### Players priority
+## Scoring
 
-- If a player from the **enemy** team has announced "quinte" before you, you cannot have "tierce" or "quarte"
-- If a player from the **enemy** team has announced "quarte" before you, you cannot have "tierce"
+The game is won by the team who first make > 150 points (If you have 150 points, the game is not over!)
+
+For this task, the points of one team will be calculated by summing their points from their announces.
+
+There are multiple rules connected to the priority of the announces. They apply only to between the teams:
+
+- The general rule: tierce < quarte < quinte. This means that if Team 1 has tierce and Teams 2 has quinte, the tierce of Team 1 should be excluded from the points.
+- If two enemy players have same sequences (e.g. player 1 and player 2 both have tierce) the one that is to a higher rank wins. If the sequences are equal, both of them should be excluded.
+- All belotes hold good!
+- All carres hold good!
+
+### Example rounds
+
+```
+Team 1: 7s 8s 9s - tierce
+Team 2: 7c 8c 9c 10c - quarte
+
+Result: Team 1 has no tierce, because it's killed by the quarte of the other team => 0 points. Team 2 has quarte => 50 points
+```
+
+```
+Team 1: Jd Qd Kd - tierce and belote
+Team 2: 7c 8c 9c - tierce
+
+Result: Team 1 has no tierce and belote => 40 points. Team 2 has no tierce, because it's lower than the tierce of the other team => 0 points
+
+*NOTE: Rules for the belotes and the current played game should be applied*
+```
+
+```
+Team 1: Jd Qd Kd - tierce and belote
+Team 2: Js Qs Ks - tierce and belote
+
+Result: Team 1 has only belote, the tierce is killed as it's equal to the tierce of the other team  => 20 points. Team 2 has only belote, the tierce is killed as it's equal to the tierce of the other team  => 20 points.
+
+*NOTE: Rules for the belotes and the current played game should be applied*
+```
+
+```
+Team 1: 10s 10d 10h 10c - carre of 10's
+Team 2: 9s 9d 9h 9c - carre of 9's
+
+Result: Team 1 has carre of 10's => 100 points. Team 2 has care of 9's => 150 points
+```
+
+```
+Team 1: 10s 10d 10h 10c - carre of 10's
+Team 2: 7s 8s 9s - tierce
+
+Result: Team 1 has carre of 10's => 100 points. Team 2 has tierce => 20 points
+```
+
+```
+Team 1: 7s 8s 9s + 9d 10d Jd - 2 tierces
+Team 2: 7h 8h 9h - tierce
+
+Result: Team 1 has 2 tierces => 40 points. Team 2 has no tierce, becase one of the tierces of the other team is higher => 0 points
+```
+
+```
+Team 1: 7s 8s 9s + 9d 10d Jd Qd - tierce & quarte
+Team 2: 9c 10c Jc Qc - quarte
+
+Result: Team 1 has nothing because the quartes are equal and the quarte of the other team kills the tierce => 0 points. Team 2 has no quarte, because the quartes are equal => 0 points
+```
 
 ## The task
 
@@ -108,8 +171,8 @@ Pesho: ["7h", "8h", "9h", "10h", "Jc", "Qh", "Ks", "Ah"]  # team Koteta
 
 ```json
 {
-  "game 1": [
-    {
+  "game 1": {
+    "round 1": {
       "Mecheta": {
         "Marto": {
           "cards:": ["7s", "8s", "9s", "10c", "Jd", "Qd", "Kh", "As"],
@@ -121,9 +184,7 @@ Pesho: ["7h", "8h", "9h", "10h", "Jc", "Qh", "Ks", "Ah"]  # team Koteta
           "announcements": [],
           "points": 0
         }
-      }
-    },
-    {
+      },
       "Koteta": {
         "Gosho": {
           "cards:": ["7c", "8d", "9c", "10s", "Jh", "Qc", "Kc", "Ad"],
@@ -138,6 +199,6 @@ Pesho: ["7h", "8h", "9h", "10h", "Jc", "Qh", "Ks", "Ah"]  # team Koteta
       }
     }
     // rest of the rounds here ....
-  ]
+  }
 }
 ```
