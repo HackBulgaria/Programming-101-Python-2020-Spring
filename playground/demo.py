@@ -16,3 +16,6 @@ class X:
 
 class D(C, X, B):
     pass
+
+
+print(D.mro())
