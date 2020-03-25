@@ -39,7 +39,7 @@ TEAM_NAMES = [
     'Elephant',
     'Tiger',
     'Shark',
-    'Owl',
+    'Bat',
     'Wolf',
     'Crocodile',
     'Lion'
