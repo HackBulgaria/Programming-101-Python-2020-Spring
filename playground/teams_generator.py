@@ -58,7 +58,10 @@ def generate_teams():
     teams[-2].extend(teams[-1])
     del teams[-1]
 
-    return {team_name: teams[index] for index, team_name in enumerate(TEAM_NAMES)}
+    return {
+        team_name: teams[index]
+        for index, team_name in enumerate(TEAM_NAMES)
+    }
 
 
 if __name__ == '__main__':
