@@ -173,6 +173,7 @@ Pesho: ["7h", "8h", "9h", "10h", "Jc", "Qh", "Ks", "Ah"]  # team Koteta
 {
   "game 1": {
     "round 1": {
+      "contract": "Hearts",
       "Mecheta": {
         "Marto": {
           "cards:": ["7s", "8s", "9s", "10c", "Jd", "Qh", "Kh", "As"],
