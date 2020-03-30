@@ -1,19 +1,15 @@
-print('Namespace before imports: ')
-print(dir())
-print('==========================')
-
 import sys
 from random import shuffle
 
-import foo
+from foo import *
 
 print('Namespace after imports: ')
 print(dir())
 print('==========================')
 
-print(sys.path)
-
-foo.func(10)
+func(10)
 
 panda = foo.Panda()
 print(panda)
+
+print('Mega constant: ', foo._MEGA_CONSTANT)
