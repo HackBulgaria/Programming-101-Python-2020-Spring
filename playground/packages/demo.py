@@ -1,22 +1,9 @@
-from random import shuffle
+import pkg
 
-def func(x):
-    print('You will not see me')
+from pkg import foo2
 
-from foo import func as func_new_name
+from random import *
 
-from foo import sys
+print(pkg.foo1.x, foo2.y)
 
-print(sys.path)
-
-# print('Namespace after imports: ')
-# print(dir())
-# print('==========================')
-
-# func(10)
-# func_new_name(10)
-
-# panda = foo.Panda()
-# print(panda)
-
-# print('Mega constant: ', foo._MEGA_CONSTANT)
+print('rand int: ', randint(0, 11))
