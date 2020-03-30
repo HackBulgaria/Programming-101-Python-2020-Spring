@@ -1,7 +1,15 @@
+print('Namespace before imports: ')
+print(dir())
+print('==========================')
+
 import sys
-import random
+from random import shuffle
 
 import foo
+
+print('Namespace after imports: ')
+print(dir())
+print('==========================')
 
 print(sys.path)
 
