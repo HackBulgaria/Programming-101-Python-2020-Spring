@@ -1,4 +1,3 @@
-import sys
 from random import shuffle
 
 def func(x):
@@ -6,12 +5,16 @@ def func(x):
 
 from foo import func as func_new_name
 
-print('Namespace after imports: ')
-print(dir())
-print('==========================')
+from foo import sys
 
-func(10)
-func_new_name(10)
+print(sys.path)
+
+# print('Namespace after imports: ')
+# print(dir())
+# print('==========================')
+
+# func(10)
+# func_new_name(10)
 
 # panda = foo.Panda()
 # print(panda)
