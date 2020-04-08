@@ -65,6 +65,7 @@ class Panda(Animal):
     pass
 
 p = Panda()
+p.eat('bamboo')
 
 Exception: All classes that inherit from "Animal" must provide "eat" method.
 ```
