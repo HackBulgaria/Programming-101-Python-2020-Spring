@@ -3,6 +3,8 @@ import sys
 from db import Database
 from db_schema import CREATE_USERS
 
+from index_view import welcome
+
 
 class Application:
     @classmethod
@@ -19,8 +21,7 @@ class Application:
 
     @classmethod
     def start(self):
-        # TODO: Trigger index view
-        pass
+        welcome()
 
 
 if __name__ == '__main__':
