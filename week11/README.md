@@ -1,3 +1,3 @@
 # Week 11
 
-* [Python Metaprogramming](https://slides.com/hackbulgaria/python-metaprogramming#/)
+* [Python Metaprogramming](https://slides.com/hackbulgaria/python-metaprogramming-eba69f)
