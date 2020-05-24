@@ -1,4 +1,4 @@
-from users.views import UserViews
+from .users.views import UserViews
 
 
 def welcome():
