@@ -36,7 +36,7 @@ Our lecture should have:
 - Name
 - Week - like the weeks in HackBulgaria
 - course - Foreign key
-- URL - where the real lecture or slides are be located.
+- URL - where the real lecture or slides are located.
 
 ## Tasks
 
@@ -55,6 +55,6 @@ Our solution should have:
 
 - Task - FK
 - Date
-- URL - link with solution in Github
+- URL - link with solution in Github. **Validate the GitHub url and don't allow models with wrong urls to be saved!**
 
 ## Each model should have an admin page!
