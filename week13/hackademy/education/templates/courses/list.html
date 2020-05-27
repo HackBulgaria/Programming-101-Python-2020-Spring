@@ -1,0 +1,12 @@
+{% extends "courses/base.html" %} {% block content %}
+<a href="{% url 'education:courses:create' %}">Add new</a>
+
+{% if courses %}
+<ul>
+  {% for course in courses %}
+  <li><a href="{% url 'education:courses:detail' course.id %}">{{ course.name }}</a></li>
+  {% endfor %}
+</ul>
+{% else %}
+<p><strong>No courses yet.</strong></p>
+{% endif %} {% endblock %}
