@@ -4,7 +4,8 @@
 {% if courses %}
 <ul>
   {% for course in courses %}
-  <li><a href="{% url 'education:courses:detail' course.id %}">{{ course.name }}</a></li>
+  <li><a href="{% url 'education:courses:detail' course.id %}">{{ course.name }}</a>
+  <form method="POST" action="{% url 'education:courses:delete' course.id %}">{% csrf_token %}<button>Delete</button></form></li>
   {% endfor %}
 </ul>
 {% else %}

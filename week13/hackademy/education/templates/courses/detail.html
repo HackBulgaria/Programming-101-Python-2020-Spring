@@ -1,3 +1,4 @@
 {% extends "courses/base.html" %} {% block content %}
+<a href="{% url 'education:courses:update' course.id %}/">Edit</a>
 <h2>{{ course.name }}</h2>
 {% endblock %}

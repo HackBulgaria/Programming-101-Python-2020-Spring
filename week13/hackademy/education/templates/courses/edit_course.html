@@ -1,0 +1,6 @@
+Edit: {{ course }}
+<form method="POST">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button>Edit!</button>
+</form>

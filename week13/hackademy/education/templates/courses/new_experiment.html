@@ -1,0 +1,46 @@
+<html>
+    <head></head>
+
+    <body>
+        <h1>Heading 1</h1>
+        <h2>Heading 2</h2>
+        <h3>Heading 3</h3>
+
+        <form method="POST">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button type="submit">Submit!</button>
+        </form>
+
+
+        <ul>
+            <li>Bullet 1</li>
+            <li>Bullet 2</li>
+            <li>Bullet 3</li>
+            <li>Bullet 4</li>
+        </ul>
+
+        <table border="1">
+        <tr>
+            <th>Month</th>
+            <th>Savings</th>
+        </tr>
+        <tr>
+            <td>January</td>
+            <td>$100</td>
+        </tr>
+        <tr>
+            <td>January</td>
+            <td>$100</td>
+        </tr>
+        <tr>
+            <td>January</td>
+            <td>$100</td>
+        </tr>
+        <tr>
+            <td>January</td>
+            <td>$100</td>
+        </tr>
+        </table>
+    </body>
+</html>

@@ -8,6 +8,10 @@ courses_patterns = [
     path('', courses.list, name='list'),
     path('<int:course_id>/', courses.detail, name='detail'),
     path('new/', courses.CourseCreateView.as_view(), name='create'),
+    path('new-experiment/', courses.new_experiment, name='new-experiment'),
+    path('update/<int:course_id>/', courses.edit_course, name='update'),
+    path('delete/<int:course_id>/', courses.delete_course, name='delete'),
+    path('session/', courses.session, name='session'),
 ]
 
 urlpatterns = [
