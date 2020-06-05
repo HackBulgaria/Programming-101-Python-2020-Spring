@@ -35,7 +35,7 @@ TEAM_NAMES = [
     'Dog',
     'Cat',
     'Bear',
-    'Horse',
+    # 'Horse',
     'Elephant',
     'Tiger',
     'Shark',
@@ -64,8 +64,17 @@ def generate_teams():
     }
 
 
+def order_teams_for_final_projects():
+    teams = TEAM_NAMES[:]
+
+    for _ in range(50):
+        random.shuffle(teams)
+
+    return list(enumerate(teams))
+
+
 if __name__ == '__main__':
     while True:
-        result = generate_teams()
+        result = order_teams_for_final_projects()
         pprint(result)
         time.sleep(0.1)
